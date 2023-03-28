@@ -1,0 +1,100 @@
+// out: false
+@import url(./variable.less);
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Mandali', sans-serif;
+
+}
+header {
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    // background-color: black;
+    justify-content: center;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1124px;
+    height: 78px;
+    font-weight: 500; 
+    img {
+        width: 129px; 
+        height: 24px;
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .nav-link {
+        display: flex;
+        list-style: none;
+        width: 680px;
+        height: 38px; 
+        padding: 0px 105px;
+        margin-top: 24px;
+        .nav-item  {
+            flex: 1 1 auto;
+            text-align: center;
+            a {
+            display: inline-block;
+            text-align: center;
+            }
+        }
+    }
+    ul.login {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0px;
+        width: 170px;
+        bottom: 0px;
+        margin-top: 24px;
+        height: 38px;
+        .nav-item-login {
+            height: 38px;
+            margin: 0px 18px;
+            width: 20%;
+        }
+        .nav-item-signup {
+            text-align: center;
+            background-color: rgba(231, 231, 231, 0.1);
+            border-radius: 3px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            flex: 1 0 auto;
+            height: auto;
+            padding: 0  px;
+            transition: ease-in-out 0.4s;
+            a {
+                color:  rgba(243, 243, 243, 1);
+            }
+        }
+
+    }
+}
+
+a {
+    text-decoration: none;
+    color:  rgba(243, 243, 243, 0.7);
+    transition: ease-in-out 0.4s ;
+}
+
+// effect start
+.navbar a:hover {
+    color: rgb(255, 255, 255, 1);
+
+}
+
+#nav-item-signup:hover {
+    background-color: white;
+    a {
+        color: @main-color;
+    }
+}
+

@@ -1,0 +1,73 @@
+// out: false
+@import url(./variable.less);
+.features-container {
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(248, 249, 250);
+    padding: 90px 0px;
+    .main-container {
+        height: fit-content;
+        gap: 90px;
+    }
+}
+
+.describe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1124px;
+    width: 90%;
+    .describe {
+        height: 500px;
+        width: 445px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h1 {
+            margin: 0px;
+            font-size: 38px;
+            font-weight: 600;
+            color: rgb(52, 58, 64);
+            line-height: 1;
+        }
+        p {
+            margin: 0px;
+            color:rgb(108, 117, 125);
+        }
+        .describe-content { 
+            margin: 0px;
+            height: fit-content;
+            display: flex;
+            justify-content: space-between;
+            .img-content {
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                img {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            p {
+                width: 380px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+#describe-container-2 {
+    flex-direction: row-reverse;
+}
+#features-container-2 {
+    background-image: url(./pics/features-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}

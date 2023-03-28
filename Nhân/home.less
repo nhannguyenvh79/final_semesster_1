@@ -1,0 +1,175 @@
+ // out: false
+@import url(./variable.less);
+
+body {
+    // background-color: rgb(87, 38, 38);
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: mandali;   
+}
+.home-container {
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 961px;
+}
+
+.home-item {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 961px;
+    display: flex;
+    justify-content: space-between;
+    .home-content  {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 961px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // background-image: url(./pics/background-1.jpg);
+        .sub-home-content { 
+            max-width: 720px;
+            height: 45%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+            .sub-home-content-icon {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: rgba(248, 248, 248, 0.2);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img { width: 20px; height: 20px;}
+            }
+            .sub-home-content-h1 {
+                font-size: 56px;
+                font-weight: @font-weight-h1;
+                text-align: center;
+                color: @text-color-h1;
+                font-family: 'Mandali', sans-serif;
+                margin: 0px;
+                line-height: 1.3;
+            }
+            .sub-home-content-p {
+                padding: 0px 40px;
+                text-align: center;
+                font-weight: @font-weight-p;
+                color: @text-color-p;
+            }
+            .sub-home-content-btn {
+                padding:  12px 28px;
+                background-color: @main-color;
+                border: 1px solid @main-color;
+                border-radius: 5px;
+                font-size: 17px;
+                color: white;
+                font-weight: 400;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 961px;
+            background-color: rgba(16, 22, 30,  0.85);
+            display: block;
+    
+        }
+    }
+    
+    .home-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 15%;
+        z-index: 9999;
+        button {
+            background-color: rgba(242, 247, 252, 0.1);
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgb(243, 243, 243, 0.6);
+            height: 50px;
+            width: 50px;
+            transform: rotate(45deg);
+            position: relative;
+            transition: 0.4s ease-in-out;
+        }
+        svg {
+
+            transform: rotate(-45deg);
+            position:  absolute;
+            width: 15px;
+            height: 15px;
+            top: 15px;
+            left: 16px;
+        }
+    }
+}
+
+#home-content-1{
+    display: flex;
+    // display: none;
+    background-image: url(./pics/background-1.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#home-content-2{
+    // display: flex;
+    display: none;
+    background-image: url(./pics/background-2.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#home-content-3{
+    // display: flex;
+    display: none;
+    background-image:  url(./pics/background-3.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+// effect start
+
+#home-btn-left:hover {
+    button {
+        box-shadow: rgba(255, 255, 255, 0.1) 0 0 1px 7px;
+        background-color: white;
+        color: @main-color;
+    }
+}
+#home-btn-right:hover {
+    button {
+        box-shadow: rgba(255, 255, 255, 0.1) 0 0 1px 7px;
+        background-color: white;
+        color: @main-color;
+    }
+}
+
+.sub-home-content-btn:hover {
+    box-shadow: 0px 10px 10px 2px rgba(0, 64, 241, 0.225);
+}
