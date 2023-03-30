@@ -1,0 +1,42 @@
+.bg-light{
+    background-color: #f8f9fa !important;
+}
+
+.section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    position: relative;
+    display: block;
+}
+
+.container {
+     text-align: center;
+}
+
+.subtitle {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.fw-bold {
+    font-weight: 700!important;
+}
+
+.align-items-center {
+    align-items: center!important;
+}
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.d-block {
+    display: block;
+}
+
+.mx-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
