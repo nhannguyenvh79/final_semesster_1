@@ -1,4 +1,4 @@
- // out: false
+
 @import url(./variable.less);
 
 body {
@@ -14,7 +14,7 @@ body {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 961px;
+    height: 874px;
 }
 
 .home-item {
@@ -22,7 +22,7 @@ body {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 961px;
+    height: 874px;
     display: flex;
     justify-content: space-between;
     .home-content  {
@@ -30,18 +30,19 @@ body {
         top: 0px;
         left: 0px;
         width: 100%;
-        height: 961px;
+        height: 874px;
         display: flex;
         justify-content: center;
         align-items: center;
         // background-image: url(./pics/background-1.jpg);
         .sub-home-content { 
             max-width: 720px;
-            height: 45%; 
+            height: auto; 
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
             z-index: 1;
             .sub-home-content-icon {
                 width: 70px;
@@ -82,7 +83,7 @@ body {
         .overlay {
             position: absolute;
             width: 100%;
-            height: 961px;
+            height: 874px;
             background-color: rgba(16, 22, 30,  0.85);
             display: block;
     
@@ -93,9 +94,9 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        height: 95%;
         width: 15%;
-        z-index: 9999;
+        z-index: 9998;
         button {
             background-color: rgba(242, 247, 252, 0.1);
             border-radius: 6px;
@@ -173,3 +174,32 @@ body {
 .sub-home-content-btn:hover {
     box-shadow: 0px 10px 10px 2px rgba(0, 64, 241, 0.225);
 }
+//effect end
+
+//responsive start
+@media  (min-width: 992px) and (max-width: 1200px) {
+    .home-item .home-content .sub-home-content { 
+        max-width: 630px;
+    }
+    .home-item .home-content .sub-home-content {
+        max-width: 70%;
+        .sub-home-content-h1 { font-size: calc(200% + 2vw )}
+    }
+}
+@media   (min-width: 576px) and (max-width: 992px) {
+    .home-item .home-content .sub-home-content {
+        max-width: 70%;
+        .sub-home-content-h1 { font-size: calc(200% + 2vw )}
+    }
+}
+@media   (max-width: 576px) {
+    .home-item .home-btn {
+        align-items: flex-end;
+        padding: 30px 0px;
+    }
+    .home-item .home-content .sub-home-content {
+        max-width: 70%;
+        .sub-home-content-h1 { font-size: calc(200% + 2vw )}
+    }
+}
+//responsive end

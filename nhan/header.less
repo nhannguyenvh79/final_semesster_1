@@ -1,4 +1,4 @@
-// out: false
+
 @import url(./variable.less);
 
 body{
@@ -23,7 +23,7 @@ header {
     align-items: center;
     width: 100%;
     max-width: 1124px;
-    height: 78px;
+    height: 78px;   
     font-weight: 500; 
     img {
         width: 129px; 
@@ -37,7 +37,9 @@ header {
         list-style: none;
         width: 680px;
         height: 38px; 
-        padding: 0px 105px;
+        padding: 0px;
+        margin-left: 102px;
+        margin-right: 102px;
         margin-top: 24px;
         .nav-item  {
             flex: 1 1 auto;
@@ -97,4 +99,67 @@ a {
         color: @main-color;
     }
 }
+.navbar-2 {
+    background-color: white;
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 5%;   
+    z-index: 9999;
+    img {
+        width: 129px; 
+        height: 24px;
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .nav-btn {
+        border: 1px solid rgba(231, 231, 231, 1);
+        font-size: 24px;
+        height: 34px;
+        padding: 0px 10px 4px 10px;
+        text-align: center;
+        border-radius: 5px;
 
+    }
+}
+// effect end
+
+
+// responsive start
+
+@media  (min-width: 992px) and (max-width: 1200px) {
+    .navbar {
+        max-width: 950px;
+        justify-content: space-between;
+        .nav-link {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        ul.login , img {
+            flex: 1 1 auto;
+        }
+}
+}
+
+@media   (min-width: 576px) and (max-width: 992px) {
+    .navbar {
+        display: none;
+}
+    .navbar-2 {
+        display: flex;
+        padding: 10px 10%;
+    }
+}
+
+@media  (max-width: 576px) {
+    .navbar {
+        display: none;
+}
+    .navbar-2 {
+        display: flex;
+        padding: 10px 5%;
+    }
+}
+// responsive end
