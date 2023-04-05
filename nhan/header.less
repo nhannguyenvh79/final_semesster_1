@@ -18,6 +18,7 @@ header {
     justify-content: center;
 }
 .navbar {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,6 +26,7 @@ header {
     max-width: 1124px;
     height: 78px;   
     font-weight: 500; 
+    opacity: 1;
     img {
         width: 129px; 
         height: 24px;
@@ -100,13 +102,15 @@ a {
     }
 }
 .navbar-2 {
+    position: absolute;
     background-color: white;
-    display: none;
+    display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 100%;
     padding: 10px 5%;   
     z-index: 9999;
+    opacity: 0;
     img {
         width: 129px; 
         height: 24px;
@@ -133,6 +137,7 @@ a {
     .navbar {
         max-width: 950px;
         justify-content: space-between;
+        transition: 0.5s ease-in-out;
         .nav-link {
             margin-left: 10px;
             margin-right: 10px;
@@ -145,21 +150,31 @@ a {
 
 @media   (min-width: 576px) and (max-width: 992px) {
     .navbar {
-        display: none;
+        // display: none;
+        opacity: 0;
+
 }
     .navbar-2 {
-        display: flex;
+        // display: flex;
+        position: absolute;
+        opacity: 1;
         padding: 10px 10%;
+        transition: 0.5s ease-in-out;
     }
 }
 
 @media  (max-width: 576px) {
     .navbar {
-        display: none;
+        // display: none;
+        opacity: 0;
+
 }
     .navbar-2 {
-        display: flex;
-        padding: 10px 5%;
+        // display: flex;
+        position: absolute;
+        opacity: 1;
+        padding: 10px 10%;
+        transition: 0.5s ease-in-out;
     }
 }
 // responsive end
