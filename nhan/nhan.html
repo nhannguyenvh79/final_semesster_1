@@ -17,10 +17,10 @@
 
 <body>
 <!-- menu bar start-->
-<header class="header">
-    <nav class="navbar">
-        <img src="./pics/logo-light.png" alt="logo">
-        <ul class="nav-link">
+<header class="header" id="header">
+    <nav class="navbar" id="navbar">
+        <img id="nav-logo" src="./pics/logo-light.png" alt="logo">
+        <ul class="nav-link" id="nav-link">
             <li class="nav-item">
                 <a href="#home">Home</a>
             </li>
@@ -40,7 +40,7 @@
                 <a href="#contact">Contact Us</a>
             </li>
         </ul>
-        <ul class="login">                
+        <ul class="login" id="login">                
             <li class="nav-item-login">
             <a href="">Login</a>
             </li>
@@ -49,10 +49,10 @@
             </li>
         </ul>
     </nav>
-    <nav class="navbar-2">
+    <!-- <nav class="navbar-2">
         <img src="./pics/logo-dark.png" alt="logo">
         <div class="nav-btn"><svg fill="none" stroke-width="2" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" height="1em" width="1em" style="overflow: visible;"><path d="M3 12h18M3 6h18M3 18h18"></path></svg></div>
-    </nav>
+    </nav> -->
 </header>
 <!-- menu bar end -->
 
@@ -183,6 +183,7 @@
         </div>
     </section>
 <!-- features end -->
-
+<script src="./js/main.js" type="module"></script>
+<script src="./js/headerScroll.js"></script>
 </body>
 </html>

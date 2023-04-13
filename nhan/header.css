@@ -5,30 +5,54 @@ body {
   font-size: 16px;
   font-family: 'Mandali', sans-serif;
 }
-header {
+html {
+  scroll-behavior: smooth;
+}
+.header {
+  top: 0px;
+  left: 0px;
   display: flex;
   position: fixed;
   z-index: 9999;
   width: 100%;
+  max-height: fit-content;
+  height: 54px;
   justify-content: center;
+  transition: all ease-out 0.5s;
+  overflow: hidden;
+}
+.mobile-header {
+  max-height: fit-content;
+  height: 370px;
 }
 .navbar {
-  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: auto;
   max-width: 1124px;
-  height: 78px;
   font-weight: 500;
-  opacity: 1;
+  transition: all ease-out 0.5s;
 }
-.navbar img {
+.navbar .logo-menu {
+  height: 24px;
+}
+.navbar .logo-menu #nav-logo-light {
   width: 129px;
   height: 24px;
   display: block;
   margin-top: auto;
   margin-bottom: auto;
+  display: inline-block;
+}
+.navbar .logo-menu #nav-logo-dark {
+  width: 129px;
+  height: 24px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: none;
 }
 .navbar .nav-link {
   display: flex;
@@ -36,17 +60,33 @@ header {
   width: 680px;
   height: 38px;
   padding: 0px;
-  margin-left: 102px;
-  margin-right: 102px;
-  margin-top: 24px;
+  margin: 20px 102px;
+  justify-content: space-around;
+  position: relative;
 }
 .navbar .nav-link .nav-item {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   text-align: center;
+  position: relative;
 }
 .navbar .nav-link .nav-item a {
   display: inline-block;
-  text-align: center;
+  text-decoration: none;
+  color: rgba(243, 243, 243, 0.7);
+}
+.navbar .nav-link .link-active a {
+  color: white;
+}
+.navbar .nav-link .link-active :before {
+  content: ' ';
+  height: 3px;
+  width: 80%;
+  margin: 0% 10%;
+  background-color: white;
+  display: inline-block;
+  position: absolute;
+  bottom: 2px;
+  border-radius: 2px;
 }
 .navbar ul.login {
   display: flex;
@@ -55,7 +95,7 @@ header {
   padding: 0px;
   width: 170px;
   bottom: 0px;
-  margin-top: 24px;
+  margin: 20px 0px;
   height: 38px;
 }
 .navbar ul.login .nav-item-login {
@@ -63,93 +103,154 @@ header {
   margin: 0px 18px;
   width: 20%;
 }
+.navbar ul.login .nav-item-login a {
+  text-decoration: none;
+  color: rgba(243, 243, 243, 0.7);
+}
 .navbar ul.login .nav-item-signup {
+  transition: all ease-out 0.5s;
   text-align: center;
   background-color: rgba(231, 231, 231, 0.1);
   border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   flex: 1 0 auto;
   height: auto;
-  padding: 0  px;
-  transition: ease-in-out 0.4s;
+  padding: 0 px;
 }
 .navbar ul.login .nav-item-signup a {
+  text-decoration: none;
   color: #f3f3f3;
 }
-a {
-  text-decoration: none;
-  color: rgba(243, 243, 243, 0.7);
-  transition: ease-in-out 0.4s;
+.navbar-scroll .logo-menu {
+  height: 24px;
 }
-.navbar a:hover {
-  color: #ffffff;
+.navbar-scroll .logo-menu #nav-logo-light {
+  display: none;
 }
-#nav-item-signup:hover {
-  background-color: white;
+.navbar-scroll .logo-menu #nav-logo-dark {
+  display: inline-block;
 }
-#nav-item-signup:hover a {
-  color: #0d6efd;
+.navbar-scroll .nav-link .nav-item a {
+  color: #343a40;
 }
-.navbar-2 {
+.navbar-scroll .nav-link .link-active a {
+  color: #1f61eb;
+}
+.navbar-scroll .nav-link .link-active :before {
+  content: ' ';
+  height: 3px;
+  width: 80%;
+  margin: 0% 10%;
+  background-color: #1f61eb;
+  display: inline-block;
   position: absolute;
-  background-color: white;
+  bottom: 2px;
+  border-radius: 2px;
+}
+.navbar-scroll ul.login .nav-item-login a {
+  color: #343a40;
+}
+.navbar-scroll ul.login .nav-item-signup {
+  transition: all ease-out 0.5s;
+  text-align: center;
+  background-color: rgba(31, 97, 235, 0.15);
+  border-radius: 3px;
+  border: 1px solid rgba(31, 97, 235, 0.2);
+  flex: 1 0 auto;
+  height: auto;
+  padding: 0px;
+}
+.navbar-scroll ul.login .nav-item-signup a {
+  color: #1f61eb;
+}
+.nav-menu-btn {
+  border: 1px solid rgba(186, 185, 185, 0.8);
+  color: #343a40;
+  font-size: 24px;
+  padding: 4px 12px 4px 12px;
+  border-radius: 5px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-navbar {
+  display: block;
+  height: auto;
+  width: 80%;
+  margin-bottom: 10px;
+}
+.mobile-navbar .logo-menu {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  max-width: 100%;
-  padding: 10px 5%;
-  z-index: 9999;
-  opacity: 0;
+  height: inherit;
+  margin: 10px 0px;
 }
-.navbar-2 img {
-  width: 129px;
-  height: 24px;
+.mobile-navbar .logo-menu .nav-menu-btn {
+  display: flex;
+}
+.mobile-navbar .nav-link {
   display: block;
-  margin-top: auto;
-  margin-bottom: auto;
+  width: fit-content;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
 }
-.navbar-2 .nav-btn {
-  border: 1px solid #e7e7e7;
-  font-size: 24px;
-  height: 34px;
-  padding: 0px 10px 4px 10px;
-  text-align: center;
-  border-radius: 5px;
+.mobile-navbar .nav-link .nav-item {
+  width: fit-content;
+  text-align: left;
+  padding: 2px 0px;
+}
+.mobile-navbar ul.login {
+  display: flex;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px 0px;
+}
+.mobile-navbar ul.login .nav-item-login {
+  display: block;
+  margin: 0px;
+  width: auto;
+  padding: 2px 16px 2px 0px;
+}
+.mobile-navbar ul.login .nav-item-signup {
+  padding: 2px 16px;
+}
+.navbar .nav-link .nav-item a:hover {
+  color: #ffffff;
+}
+.navbar ul.login .nav-item-login a:hover {
+  color: #ffffff;
+}
+.navbar #nav-item-signup:hover {
+  background-color: white;
+}
+.navbar #nav-item-signup:hover a {
+  color: #0d6efd;
+}
+.navbar-scroll .nav-link .nav-item a:hover {
+  color: #2061ed;
+}
+.navbar-scroll ul.login .nav-item-login a:hover {
+  color: #2061ed;
+}
+.navbar-scroll #nav-item-signup:hover {
+  background-color: #2061ed;
+}
+.navbar-scroll #nav-item-signup:hover a {
+  color: #ffffff;
 }
 @media (min-width: 992px) and (max-width: 1200px) {
-  .navbar {
+  .navbar,
+  .navbar-scroll {
     max-width: 950px;
     justify-content: space-between;
-    transition: 0.5s ease-in-out;
   }
-  .navbar .nav-link {
+  .navbar .nav-link,
+  .navbar-scroll .nav-link {
     margin-left: 10px;
     margin-right: 10px;
-  }
-  .navbar ul.login,
-  .navbar img {
-    flex: 1 1 auto;
-  }
-}
-@media (min-width: 576px) and (max-width: 992px) {
-  .navbar {
-    opacity: 0;
-  }
-  .navbar-2 {
-    position: absolute;
-    opacity: 1;
-    padding: 10px 10%;
-    transition: 0.5s ease-in-out;
-  }
-}
-@media (max-width: 576px) {
-  .navbar {
-    opacity: 0;
-  }
-  .navbar-2 {
-    position: absolute;
-    opacity: 1;
-    padding: 10px 10%;
-    transition: 0.5s ease-in-out;
   }
 }

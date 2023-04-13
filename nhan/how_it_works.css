@@ -126,7 +126,7 @@ body {
   }
   .main-container .process-container .item-list {
     width: 100%;
-    padding: 0px 10px;
+    padding: 0px 0px;
   }
   .main-container .content-container {
     max-width: 80%;
