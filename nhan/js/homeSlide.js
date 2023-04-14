@@ -37,7 +37,6 @@ $rightBtn.addEventListener('click',() => {
     <p class="sub-home-content-p" id="sub-home-content-p">${homeContents[index].p}</p>
     <button class="sub-home-content-btn">Get Started</button>`
     $homeContent.style.backgroundImage = `url(${homeContents[index].backgroundImage})`
-    $homeContent.setAttribute = ''
 })
 
 $leftBtn.addEventListener('click',() => {

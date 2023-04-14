@@ -1,13 +1,6 @@
 
 @import url(./variable.less);
-body{
-    // background-color: rgb(87, 38, 38);
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: mandali;
-}
+
 .working-container {
     display: block;
     width: 100%;
@@ -40,9 +33,10 @@ body{
         }
         h1 {
             margin: 0px;
-            font-size: 30px;
+            font-size: 36px;
             font-weight: 800;
             color: rgb(52, 58, 64);
+            line-height: 1.4;
         }
         p {
             margin: 0px;
@@ -109,6 +103,8 @@ body{
 }
 @media   (min-width: 576px) and (max-width: 992px) {
     .main-container .process-container {
+        width: 80%;
+        align-items: center;
         img {
             display: none;
         }
@@ -116,7 +112,7 @@ body{
         gap: 80px;
     
         .item-list {
-            width: 100%;
+           width: 100%;
         }
     }
     .main-container .content-container {
@@ -132,12 +128,16 @@ body{
         gap: 80px;
         align-items: center;
         .item-list {
-            width: 100%;
+            width: 80%;
             padding: 0px 0px;
         }
     }
     .main-container .content-container {
         max-width: 80%;
+    }
+    .main-container .content-container h1 {
+        font-size: 30px;
+        line-height: 1.4
     }
 }
 //responsive end

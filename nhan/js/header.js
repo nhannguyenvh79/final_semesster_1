@@ -67,6 +67,7 @@ function responsiveHeader() {
 window.addEventListener('resize', () => {responsiveHeader()})
 window.addEventListener('load', () => {responsiveHeader()})
 
+
 // highlight link
 const $navbarLinks = document.querySelectorAll('.navbar .nav-link li')
 const $sections = document.querySelectorAll('section')

@@ -1,10 +1,3 @@
-body {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-family: mandali;
-}
 .working-container {
   display: block;
   width: 100%;
@@ -36,9 +29,10 @@ body {
 }
 .main-container .content-container h1 {
   margin: 0px;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 800;
   color: #343a40;
+  line-height: 1.4;
 }
 .main-container .content-container p {
   margin: 0px;
@@ -102,6 +96,8 @@ body {
 }
 @media (min-width: 576px) and (max-width: 992px) {
   .main-container .process-container {
+    width: 80%;
+    align-items: center;
     flex-direction: column;
     gap: 80px;
   }
@@ -125,10 +121,14 @@ body {
     display: none;
   }
   .main-container .process-container .item-list {
-    width: 100%;
+    width: 80%;
     padding: 0px 0px;
   }
   .main-container .content-container {
     max-width: 80%;
+  }
+  .main-container .content-container h1 {
+    font-size: 30px;
+    line-height: 1.4;
   }
 }
