@@ -1,0 +1,331 @@
+.achievement {
+  background-image: url(pics/counter-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.achievement .overlay {
+  background-color: rgba(52, 58, 64, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+}
+.achievement .container {
+  z-index: 1;
+  width: 80%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0px;
+  color: white;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.achievement .container .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  width: 210px;
+}
+.achievement .container .item .icon-item {
+  font-size: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.achievement .container .item .content-item {
+  margin-left: 20px;
+}
+.achievement .container .item .content-item h1 {
+  display: block;
+  font-size: 38px;
+  margin: 0px;
+  height: fit-content;
+  text-align: left;
+  line-height: 1.5;
+}
+.achievement .container .item .content-item h1 span {
+  display: inline-block;
+  line-height: 1;
+  height: inherit;
+}
+.achievement .container .item .content-item p {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0px 0px;
+  font-size: 16px;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .achievement .container {
+    width: 700px;
+  }
+  .achievement .container {
+    margin: 20px;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .achievement .container {
+    width: 700px;
+  }
+  .achievement .container {
+    margin: 20px;
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 576px) {
+  .achievement .container {
+    width: 400px;
+  }
+  .achievement .container {
+    margin: 20px;
+    justify-content: space-evenly;
+  }
+}
+.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 10%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f8f9fa;
+}
+.question .content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  max-width: 50%;
+  height: auto;
+  line-height: 1.5;
+  color: #343a40;
+}
+.question .content-container h1 {
+  color: #343a40;
+  font-size: 36px;
+  margin: 0px;
+}
+.question .content-container p {
+  color: #7b8c96;
+}
+.question .describe-container {
+  margin-top: 50px;
+  padding: 0px;
+}
+.question .describe-container img {
+  width: 356px;
+  height: 436px;
+}
+.question .describe-container .describe {
+  padding: 0px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 440px;
+}
+.question .describe-container .describe .question-card {
+  margin-top: 10px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: #7b8c96;
+  padding: 10px 20px;
+  overflow: hidden;
+  transition: all ease-in-out 0.6s;
+  height: fit-content;
+  border-radius: 5px;
+}
+.question .describe-container .describe .question-card .question-header {
+  display: flex;
+  justify-content: space-between;
+  color: #343a40;
+}
+.question .describe-container .describe .question-card .question-header h2 {
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+  font-size: 18px;
+}
+.question .describe-container .describe .question-card .question-header span {
+  font-size: 22px;
+  line-height: 1;
+}
+.question .describe-container .describe .question-card .answer {
+  height: 0px;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .question .describe-container .describe {
+    width: 60%;
+  }
+  .question .content-container {
+    max-width: 70%;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .question .describe-container .describe {
+    width: 80%;
+  }
+  .question .content-container h1 {
+    font-size: 34px;
+  }
+  .question .content-container {
+    max-width: 80%;
+  }
+  .question .describe-container img {
+    width: 306px;
+    height: 386px;
+  }
+}
+@media (max-width: 576px) {
+  .question {
+    padding: 90px 5%;
+  }
+  .question .content-container {
+    max-width: 90%;
+  }
+  .question .content-container h1 {
+    font-size: 30px;
+  }
+  .question .describe-container img {
+    width: 306px;
+    height: 386px;
+  }
+  .question .describe-container {
+    width: 90%;
+  }
+  .question .describe-container .describe {
+    min-width: 100%;
+  }
+}
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 10%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonial .content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  max-width: 40%;
+  height: auto;
+  line-height: 1.5;
+  color: #343a40;
+}
+.testimonial .content-container h1 {
+  color: #343a40;
+  font-size: 36px;
+  margin: 0px;
+}
+.testimonial .content-container p {
+  color: #7b8c96;
+}
+.testimonial .scr-pics {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  margin: 50px 0px;
+}
+.testimonial .scr-pics .pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  overflow: hidden;
+  transform: translateX(-131px);
+}
+.testimonial .scr-pics .pic-container .pic {
+  width: 243px;
+  height: 100%;
+  margin: 0px 10px;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+.testimonial .scr-pics .pic-container .pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(134, 132, 132, 0.15);
+}
+.testimonial .scr-pics .pic-container .pic.center {
+  opacity: 1;
+  width: 257px;
+  height: fit-content;
+}
+.testimonial .scr-pics .pic-container .pic.center img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.testimonial .pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.testimonial .pagination .stt {
+  height: 8px;
+  width: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #becff2;
+}
+.testimonial .pagination .stt.active {
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #1f61eb;
+  box-shadow: inset 0px 0px 0px 2px rgba(255, 255, 255);
+  border: 1px solid #1f61eb;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .testimonial .content-container {
+    max-width: 50%;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  .testimonial .content-container {
+    max-width: 80%;
+  }
+  .testimonial .content-container h1 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 576px) {
+  .testimonial {
+    padding: 90px 5%;
+  }
+  .testimonial .content-container {
+    max-width: 90%;
+  }
+  .testimonial .content-container h1 {
+    font-size: 30px;
+  }
+}
