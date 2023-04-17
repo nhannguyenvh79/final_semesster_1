@@ -111,6 +111,10 @@
   color: white;
   border: none;
 }
+.pricing .price-options .option .btn a {
+  text-decoration: none;
+  color: white;
+}
 @media (min-width: 992px) and (max-width: 1300px) {
   .pricing .content-container {
     max-width: 50%;
