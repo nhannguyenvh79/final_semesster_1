@@ -345,7 +345,7 @@
 .footer .ft1 .ft1-contents .ft1-content p {
   color: rgba(255, 255, 255, 0.6);
   display: block;
-  width: fit-content;
+  width: auto;
 }
 .footer .ft1 .ft1-contents .ft1-content p:hover {
   color: white;
