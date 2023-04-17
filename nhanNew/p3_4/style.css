@@ -186,7 +186,7 @@
   transition: all ease-in-out 0.6s;
 }
 .question .describe-container .describe .question-card.showed .answer {
-  height: auto;
+  height: 100px;
   transition: all ease-in-out 0.6s;
 }
 @media (min-width: 992px) and (max-width: 1300px) {

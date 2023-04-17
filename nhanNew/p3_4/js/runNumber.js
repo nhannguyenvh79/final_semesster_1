@@ -8,7 +8,6 @@ const $brandNumber = $brand.innerHTML
 const $clientNumber = $client.innerHTML
 const $ideaNumber = $idea.innerHTML
 const $userNumber = $user.innerHTML
-console.log($brandNumber, $clientNumber, $ideaNumber, $userNumber)
 
 //plus gap units during 1ms (should fixnum % gap == 0)
 function upNumber (variable, gap, fixedNum) {
