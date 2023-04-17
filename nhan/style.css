@@ -461,6 +461,10 @@ html {
   color: white;
   font-weight: 400;
 }
+.home-item .home-content .sub-home-content .sub-home-content-btn a {
+  text-decoration: none;
+  color: white;
+}
 .home-item .home-content .overlay {
   position: absolute;
   width: 100%;

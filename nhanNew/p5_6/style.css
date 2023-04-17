@@ -180,6 +180,7 @@
   color: #7b8c96;
 }
 .contact .form {
+  position: relative;
   width: 100%;
   max-width: 50%;
   display: flex;
@@ -226,6 +227,22 @@
   height: 30px;
   width: 150px;
   margin: 0px 10px;
+}
+.contact #alert-1 {
+  color: red;
+  display: none;
+}
+.contact #alert-1 span {
+  font-weight: 600;
+}
+.contact #alert-2 {
+  color: green;
+  display: none;
+}
+.contact #back-home {
+  display: none;
+  color: green;
+  margin: 0px;
 }
 @media (min-width: 992px) and (max-width: 1300px) {
   .contact .content-container {

@@ -35,7 +35,7 @@ $rightBtn.addEventListener('click',() => {
     `<div class="sub-home-content-icon"><img id="icon" src="${homeContents[index].icon}" alt="dolar-icon"></div>
     <h1 class="sub-home-content-h1" id="sub-home-content-h1">${homeContents[index].h1}</h1>
     <p class="sub-home-content-p" id="sub-home-content-p">${homeContents[index].p}</p>
-    <button class="sub-home-content-btn">Get Started</button>`
+    <button class="sub-home-content-btn"><a href="/nhanNew/Login-form/index.html">Get Started</a></button>`
     $homeContent.style.backgroundImage = `url(${homeContents[index].backgroundImage})`
 })
 
@@ -45,7 +45,7 @@ $leftBtn.addEventListener('click',() => {
     $subHomeContent.innerHTML = `<div class="sub-home-content-icon"><img id="icon" src="${homeContents[index].icon}" alt="dolar-icon"></div>
     <h1 class="sub-home-content-h1" id="sub-home-content-h1">${homeContents[index].h1}</h1>
     <p class="sub-home-content-p" id="sub-home-content-p">${homeContents[index].p}</p>
-    <button class="sub-home-content-btn">Get Started</button>`
+    <button class="sub-home-content-btn"><a href="/nhanNew/Login-form/index.html">Get Started</a></button>`
     $homeContent.style.backgroundImage = `url(${homeContents[index].backgroundImage})`
 })
 
@@ -56,7 +56,7 @@ setInterval(() => {
     `<div class="sub-home-content-icon"><img id="icon" src="${homeContents[index].icon}" alt="dolar-icon"></div>
     <h1 class="sub-home-content-h1" id="sub-home-content-h1">${homeContents[index].h1}</h1>
     <p class="sub-home-content-p" id="sub-home-content-p">${homeContents[index].p}</p>
-    <button class="sub-home-content-btn">Get Started</button>`
+    <button class="sub-home-content-btn"><a href="/nhanNew/Login-form/index.html">Get Started</a></button>`
     $homeContent.style.backgroundImage = `url(${homeContents[index].backgroundImage})`
 },4000)
 
