@@ -5,6 +5,15 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
 }
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+body {
+  width: auto;
+}
 form {
   position: relative;
   background-color: rgba(249, 249, 249, 0.8);
