@@ -31,14 +31,14 @@ function slideRight (index) {
     `<div class="sub-home-content-icon"><img id="icon" src="${homeContents[index].icon}" alt="dolar-icon"></div>
     <h1 class="sub-home-content-h1" id="sub-home-content-h1">${homeContents[index].h1}</h1>
     <p class="sub-home-content-p" id="sub-home-content-p">${homeContents[index].p}</p>
-    <button class="sub-home-content-btn"><a href="/nhanNew/Login-form/index.html">Get Started</a></button>`
+    <button class="sub-home-content-btn"><a href="./nhanNew/Login-form/form.html">Get Started</a></button>`
     $homeContent.style.backgroundImage = `url(${homeContents[index].backgroundImage})`
 }
 function slideLeft (index) {
     $subHomeContent.innerHTML = `<div class="sub-home-content-icon"><img id="icon" src="${homeContents[index].icon}" alt="dolar-icon"></div>
     <h1 class="sub-home-content-h1" id="sub-home-content-h1">${homeContents[index].h1}</h1>
     <p class="sub-home-content-p" id="sub-home-content-p">${homeContents[index].p}</p>
-    <button class="sub-home-content-btn"><a href="/nhanNew/Login-form/index.html">Get Started</a></button>`
+    <button class="sub-home-content-btn"><a href="./nhanNew/Login-form/form.html">Get Started</a></button>`
     $homeContent.style.backgroundImage = `url(${homeContents[index].backgroundImage})`
 }
 
