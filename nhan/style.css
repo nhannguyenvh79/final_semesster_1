@@ -328,7 +328,7 @@ html {
   margin: 0px;
 }
 .mobile-navbar .nav-link .nav-item {
-  width: auto;
+  width: fit-content;
   text-align: left;
   padding: 2px 0px;
 }
