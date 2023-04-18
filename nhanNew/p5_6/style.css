@@ -225,30 +225,52 @@
   width: 100%;
   font-family: 'Mandali', sans-serif;
 }
-.contact .form button {
+.contact .form .submit {
   color: white;
-  background: linear-gradient(to right, #eb2254, #f593ab);
+  background: linear-gradient(to right, #ec2557, #f491aa);
   border: none;
   border-radius: 5px;
   height: 30px;
   width: 150px;
   margin: 0px 10px;
+  transition: all ease-in-out 0.4s;
 }
 #alert-1 {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  right: 50px;
   color: red;
-  display: none;
+  display: block;
+  opacity: 0;
+  margin: 0px;
+  line-height: 1;
+  transition: all ease-in-out 0.4s;
+  text-align: center;
 }
 #alert-1 span {
   font-weight: 600;
 }
 #alert-2 {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  right: 50px;
   color: green;
-  display: none;
-}
-#back-home {
-  display: none;
-  color: green;
+  display: block;
+  opacity: 0;
   margin: 0px;
+  line-height: 1.2;
+  transition: all ease-in-out 0.4s;
+  text-align: center;
+}
+.contact .form .row input:focus {
+  outline: none;
+  background-color: rgba(211, 212, 214, 0.3);
+}
+.contact .form .row textarea:focus {
+  outline: none;
+  background-color: rgba(211, 212, 214, 0.3);
 }
 @media (min-width: 992px) and (max-width: 1300px) {
   .contact .content-container {

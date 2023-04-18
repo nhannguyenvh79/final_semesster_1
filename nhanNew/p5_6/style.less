@@ -228,32 +228,54 @@
                 font-family: 'Mandali', sans-serif;
             }
         }
-        button {
+        .submit {
             color: white;
-            background: linear-gradient(to right, rgb(235, 34, 84),rgb(245, 147, 171));
+            background: linear-gradient(to right, rgb(236, 37, 87),rgb(244, 145, 170));
             border: none;
             border-radius: 5px;
             height: 30px;
             width: 150px;
             margin: 0px 10px;
+            transition: all ease-in-out 0.4s;
         }
     }
 }
 #alert-1 {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    right: 50px;
     color: red;
-    display: none;
+    display: block;
+    opacity: 0;
+    margin: 0px;
+    line-height: 1;
+    transition: all ease-in-out 0.4s;
+    text-align: center;
     span {
         font-weight: 600;
     }
 }
 #alert-2 {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    right: 50px;
     color: green;
-    display: none;
-}
-#back-home {
-    display: none;
-    color: green;
+    display: block;
+    opacity: 0;
     margin: 0px;
+    line-height: 1.2;
+    transition: all ease-in-out 0.4s;
+    text-align: center;
+}
+.contact .form .row input:focus {
+    outline: none;
+    background-color: rgba(211, 212, 214, 0.3);
+}
+.contact .form .row textarea:focus {
+    outline: none;
+    background-color: rgba(211, 212, 214, 0.3);
 }
 
 @media  (min-width: 992px) and (max-width: 1300px) {
