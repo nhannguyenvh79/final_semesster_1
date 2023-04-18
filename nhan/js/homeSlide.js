@@ -26,37 +26,53 @@ const $rightBtn = document.getElementById('home-btn-right')
 const $subHomeContent = document.getElementById('sub-home-content')
 
 
-
-let index = 0;
-$rightBtn.addEventListener('click',() => {
-    index++
-    if (index == homeContents.length) {index = 0}
+function slideRight (index) {
     $subHomeContent.innerHTML = 
     `<div class="sub-home-content-icon"><img id="icon" src="${homeContents[index].icon}" alt="dolar-icon"></div>
     <h1 class="sub-home-content-h1" id="sub-home-content-h1">${homeContents[index].h1}</h1>
     <p class="sub-home-content-p" id="sub-home-content-p">${homeContents[index].p}</p>
     <button class="sub-home-content-btn"><a href="/nhanNew/Login-form/index.html">Get Started</a></button>`
     $homeContent.style.backgroundImage = `url(${homeContents[index].backgroundImage})`
-})
-
-$leftBtn.addEventListener('click',() => {
-    index--
-    if (index < 0) {index = homeContents.length - 1}
+}
+function slideLeft (index) {
     $subHomeContent.innerHTML = `<div class="sub-home-content-icon"><img id="icon" src="${homeContents[index].icon}" alt="dolar-icon"></div>
     <h1 class="sub-home-content-h1" id="sub-home-content-h1">${homeContents[index].h1}</h1>
     <p class="sub-home-content-p" id="sub-home-content-p">${homeContents[index].p}</p>
     <button class="sub-home-content-btn"><a href="/nhanNew/Login-form/index.html">Get Started</a></button>`
     $homeContent.style.backgroundImage = `url(${homeContents[index].backgroundImage})`
-})
+}
 
-setInterval(() => {
+
+let index = 0;
+$rightBtn.addEventListener('click',() => {
     index++
     if (index == homeContents.length) {index = 0}
-    $subHomeContent.innerHTML = 
-    `<div class="sub-home-content-icon"><img id="icon" src="${homeContents[index].icon}" alt="dolar-icon"></div>
-    <h1 class="sub-home-content-h1" id="sub-home-content-h1">${homeContents[index].h1}</h1>
-    <p class="sub-home-content-p" id="sub-home-content-p">${homeContents[index].p}</p>
-    <button class="sub-home-content-btn"><a href="/nhanNew/Login-form/index.html">Get Started</a></button>`
-    $homeContent.style.backgroundImage = `url(${homeContents[index].backgroundImage})`
-},4000)
+    slideRight (index)
+
+    clearInterval(interval)
+    interval = setInterval(() => {
+    index++
+    if (index == homeContents.length) {index = 0}
+    slideRight (index)
+    },3000)
+})
+
+$leftBtn.addEventListener('click',() => {
+    index--
+    if (index < 0) {index = homeContents.length - 1}
+    slideLeft (index)
+
+    clearInterval(interval)
+    interval = setInterval(() => {
+    index++
+    if (index == homeContents.length) {index = 0}
+    slideRight (index)
+    },3000)
+})
+
+let interval = setInterval(() => {
+    index++
+    if (index == homeContents.length) {index = 0}
+    slideRight (index)
+},3000)
 

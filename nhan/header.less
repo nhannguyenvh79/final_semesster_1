@@ -15,6 +15,7 @@ html {
 }
 
 .header {
+    overflow: hidden;
     font-family: 'Mandali', sans-serif;
     top: 0px;
     left: 0px;
@@ -22,7 +23,7 @@ html {
     position: fixed;
     z-index: 9999;
     width: 100%;
-    max-height: fit-content;
+    max-height: auto;
     height: 54px;
     justify-content: center;
     transition: all ease-out 0.5s;
@@ -30,7 +31,7 @@ html {
 }
 .mobile-header {
     font-family: 'Mandali', sans-serif;
-    max-height: fit-content;
+    max-height: auto;
     height: 370px;
 }
 
@@ -46,7 +47,6 @@ html {
     font-weight: 500; 
     transition: all ease-out 0.5s;
     .logo-menu {
-        height: 24px;
         #nav-logo-light{
             width: 129px; 
             height: 24px;
@@ -218,12 +218,12 @@ html {
     }
     .nav-link {
         display: block;
-        width: fit-content;
+        width: auto;
         height: auto; 
         padding: 0px;
         margin: 0px;
         .nav-item {
-            width: fit-content;
+            width: auto;
             text-align: left;
             padding: 2px 0px;
         }

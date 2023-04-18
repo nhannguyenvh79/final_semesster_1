@@ -19,14 +19,14 @@ function upNumber (variable, gap, fixedNum) {
         } else if (i >= fixedNum) {
             clearInterval()
         }
-    } ,1)
+    } ,7)
 }
 
 function runNumber () {
     if ($achievement.getBoundingClientRect().top >= 0.9*document.documentElement.clientHeight) {
         upNumber($brand, 2, $brandNumber)
         upNumber($client, 5, $clientNumber)
-        upNumber($idea, 1, $ideaNumber)
+        upNumber($idea, 2, $ideaNumber)
         upNumber($user, 5, $userNumber)
     }
 }
@@ -40,4 +40,4 @@ const debounce = (fun, delay) => {
         timerId = setTimeout(fun, delay);
 }
 }
-window.addEventListener('scroll',debounce(() => {runNumber ()}, 100) )
+window.addEventListener('scroll',debounce(() => {runNumber ()}, 50) )

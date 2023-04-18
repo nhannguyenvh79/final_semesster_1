@@ -10,10 +10,12 @@ function isEmail(email) {
     const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     return regex.test(email);
 }
-function isPhoneNumber(phoneNumber) { //phone number is string
-    const regex = /^\d{10}$/; // định dạng số điện thoại 10 chữ số
+function isPhoneNumber(phoneNumber) {
+    const regex = /^\d{10}$/; 
     return regex.test(phoneNumber);
-  }
+}
+
+
 function alertTrue () {
     document.getElementById ('alert-1').style.display = 'none';
     document.getElementById ('alert-2').style.display = 'block';
